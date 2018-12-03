@@ -26,12 +26,17 @@
         },
         {
           "name": "AnimalDetailsIntent",
-          "slots": [
-
-          ],
+          "slots": [{
+            "name": "AnimalName",
+            "type": "AMAZON.US_FIRST_NAME"
+          }],
           "samples": [
-            "Give me details",
-            "details"
+            "Give me details about {AnimalName}",
+            "What can you tell me about {AnimalName}",
+            "Describe {AnimalName}",
+            "Whats the backstory of {AnimalName}",
+            "Whats {AnimalName} story",
+            "Tell me about {AnimalName}"
           ]
         }
       ]
