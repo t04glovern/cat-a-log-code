@@ -3,14 +3,13 @@
     "publishingInformation": {
       "locales": {
         "en-US": {
-          "summary": "Sample Short Description",
+          "summary": "Interacts with Cat-a-log database",
           "examplePhrases": [
-            "Alexa open hello world",
-            "Alexa tell hello world hello",
-            "Alexa ask hello world say hello"
+            "Alexa open cat-a-log database",
+            "Alexa ask cat-a-log database for details"
           ],
           "name": "cat-a-log",
-          "description": "Sample Full Description"
+          "description": "Interacting with cat data for training course"
         }
       },
       "isAvailableWorldwide": true,

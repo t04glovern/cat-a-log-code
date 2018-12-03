@@ -1,7 +1,7 @@
 {
   "interactionModel": {
     "languageModel": {
-      "invocationName": "greeter",
+      "invocationName": "cat. a. log database",
       "types": [
 
       ],
@@ -25,14 +25,13 @@
           ]
         },
         {
-          "name": "HelloWorldIntent",
+          "name": "AnimalDetailsIntent",
           "slots": [
 
           ],
           "samples": [
-            "hello",
-            "say hello",
-            "say hello world"
+            "Give me details",
+            "details"
           ]
         }
       ]
