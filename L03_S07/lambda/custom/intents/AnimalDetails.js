@@ -4,6 +4,8 @@
 
 "use strict";
 
+const utils = require("../utils");
+
 module.exports = {
   canHandle(handlerInput) {
     return (
@@ -12,18 +14,36 @@ module.exports = {
     );
   },
   handle(handlerInput) {
-    // Event houses our slot values
-    const event = handlerInput.requestEnvelope;
+    return new Promise((resolve, reject) => {
+      // Event houses our slot values
+      const event = handlerInput.requestEnvelope;
 
-    // Resolve the animal name
-    const name = getAnimalName(event);
+      // Resolve the animal name
+      const name = getAnimalName(event);
 
-    const speechText = "Animal Details for " + name;
+      let speechText;
+      let reprompt;
 
-    return handlerInput.responseBuilder
-      .speak(speechText)
-      .withSimpleCard(name, speechText)
-      .getResponse();
+      utils.getAnimalByName(name, animal => {
+        if (animal) {
+          speechText = animal.description;
+        } else {
+          speechText = "No Animal was found under the name " + name;
+        }
+
+        reprompt =
+          "Want to check an animals status? Say: Whats the backstory of " +
+          name;
+
+        const response = handlerInput.responseBuilder
+          .speak(speechText)
+          .reprompt(reprompt)
+          .withSimpleCard(name, speechText)
+          .getResponse();
+        resolve(response);
+        return;
+      });
+    });
   }
 };
 
