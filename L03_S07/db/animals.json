@@ -1,0 +1,115 @@
+[{
+        "adopted": true,
+        "id": "3063wmAH4UtML5RrF1sK",
+        "location": "St James, Western Australia",
+        "description": "I'm a Chatty Catty and I'd love to share my meows with someone special",
+        "name": "Paul",
+        "type": "cat",
+        "attributes": [
+            "desexed",
+            "vaccinated",
+            "microchipped",
+            "children"
+        ]
+    },
+    {
+        "name": "Greg",
+        "adopted": true,
+        "id": "EjVPcBAtKHpVKR490rBK",
+        "location": "St James, Western Australia",
+        "description": "Is that food I smell?",
+        "type": "dog",
+        "attributes": [
+            "desexed",
+            "vaccinated",
+            "microchipped"
+        ]
+    },
+    {
+        "adopted": true,
+        "id": "MUMNgOJRyb15XSvef4gn",
+        "location": "St James, Western Australia",
+        "description": "Play Hard, Nap Hard is my motto. I get along better with my human playmates then my kitten ones.",
+        "name": "Felix",
+        "type": "cat",
+        "attributes": [
+            "vaccinated",
+            "microchipped",
+            "children",
+            "desexed"
+        ]
+    },
+    {
+        "name": "Sam",
+        "adopted": true,
+        "id": "W0az66nOQcSeoFpKuKqr",
+        "location": "Bullcreek, Western Australia",
+        "description": "When I arrived all I wanted to do was snuggle up to my human. Maybe you can be my new human?",
+        "type": "reptile",
+        "attributes": [
+            "desexed",
+            "vaccinated",
+            "microchipped"
+        ]
+    },
+    {
+        "adopted": true,
+        "id": "c0cHvuInRIMVUqoGdyeH",
+        "location": "South Perth, Western Australia",
+        "description": "I'm small and still trying to understand the world",
+        "name": "Bill",
+        "type": "reptile",
+        "attributes": [
+            "children"
+        ]
+    },
+    {
+        "adopted": false,
+        "id": "oBppUZGVejzpTsaUiWPi",
+        "location": "Willeton, Western Australia",
+        "description": "I was shy at first but have grown to love playing with people and other puppies.",
+        "name": "Frankie",
+        "type": "dog",
+        "attributes": [
+            "children"
+        ]
+    },
+    {
+        "name": "Sasha",
+        "adopted": true,
+        "id": "fVAkmkjQeKXG9A273RzQ",
+        "location": "Margret River, Western Australia",
+        "description": "Don't you dare touch my fishie!",
+        "type": "bird",
+        "attributes": [
+            "children"
+        ]
+    },
+    {
+        "name": "Julia",
+        "adopted": false,
+        "id": "wX26pcw1OaGDdcLxkGsa",
+        "location": "St James, Western Australia",
+        "description": "I just had a litter of kittens and am super confused about why that happened!",
+        "type": "cat",
+        "attributes": [
+            "desexed",
+            "vaccinated",
+            "microchipped"
+        ]
+    },
+    {
+        "location": "St James, Western Australia",
+        "description": "I'm inquisitive and always curious; should be expected though since I am a cat 😋",
+        "name": "Grace",
+        "adopted": true,
+        "id": "1tfdpcl6oYnbZjCK6kvW",
+        "type": "cat",
+        "attributes": [
+            "desexed",
+            "microchipped",
+            "vaccinated",
+            "children"
+        ]
+    }
+]

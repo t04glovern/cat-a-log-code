@@ -8,3 +8,4 @@
 * [L03-S04-improving-project-structure](/L03-S04)
 * [L03-S05-deploy-and-test-project](/L03-S05)
 * [L03-S06-intent-slots](/L03-S06)
+* [L03-S07-dynamodb-lookup](/L03-S07)
