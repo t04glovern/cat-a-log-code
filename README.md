@@ -9,3 +9,7 @@
 * [L03-S05-deploy-and-test-project](/L03-S05)
 * [L03-S06-intent-slots](/L03-S06)
 * [L03-S07-dynamodb-lookup](/L03-S07)
+
+## Lesson 04 - Alexa Skills Kit (Intermediate) Cat-a-Log Project
+
+* [L04-S01-response-locale](/L04-S01)
