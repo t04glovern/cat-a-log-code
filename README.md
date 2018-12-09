@@ -13,3 +13,4 @@
 ## Lesson 04 - Alexa Skills Kit (Intermediate) Cat-a-Log Project
 
 * [L04-S01-response-locale](/L04-S01)
+* [L04-S02-name-attribute](/L04-S02)
