@@ -10,6 +10,15 @@
           ],
           "name": "cat-a-log",
           "description": "Interacting with cat data for training course"
+        },
+        "en-AU": {
+          "summary": "Interacts with Cat-a-log database",
+          "examplePhrases": [
+            "Alexa open cat-a-log database",
+            "Alexa ask cat-a-log database for details"
+          ],
+          "name": "cat-a-log",
+          "description": "Interacting with cat data for training course"
         }
       },
       "isAvailableWorldwide": true,

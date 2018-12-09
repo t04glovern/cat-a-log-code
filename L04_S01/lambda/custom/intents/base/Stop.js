@@ -15,11 +15,16 @@ module.exports = {
     );
   },
   handle(handlerInput) {
-    const speechText = "Goodbye!";
+    // Get a reference to the request event
+    const event = handlerInput.requestEnvelope;
+    // Load an instance of resources based on our locale
+    const res = require("../../resources")(event.request.locale);
+    // Load in our response based on our locale
+    const speechText = res.strings.EXIT_SKILL;
 
     return handlerInput.responseBuilder
       .speak(speechText)
-      .withSimpleCard("Hello World", speechText)
+      .withShouldEndSession(true)
       .getResponse();
   }
 };
