@@ -1,5 +1,9 @@
 # Code Progression
 
+## Lesson 02 - Alexa Skill (Basics) Random Quote Generator
+
+* [https://github.com/t04glovern/alexa-random-quotes](https://github.com/t04glovern/alexa-random-quotes)
+
 ## Lesson 03 - Alexa Skills Kit (Basics) Cat-a-Log Project
 
 * [L03-S01-create-skill-kit-project](/L03_S01)
@@ -17,3 +21,4 @@
 * [L04-S03-interceptors](/L04-S03)
 * [L04-S04-dynamodb-persistence](/L04-S04)
 * [L04-S05-timezone-dynamic-responses](/L04-S05)
+* [L04-S06-cleanup-localisation](/L04-S06)
