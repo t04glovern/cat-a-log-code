@@ -16,3 +16,4 @@
 * [L04-S02-name-attribute](/L04-S02)
 * [L04-S03-interceptors](/L04-S03)
 * [L04-S04-dynamodb-persistence](/L04-S04)
+* [L04-S05-timezone-dynamic-responses](/L04-S05)

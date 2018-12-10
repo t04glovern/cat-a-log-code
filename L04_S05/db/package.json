@@ -1,0 +1,16 @@
+{
+  "name": "db-manage",
+  "version": "1.0.0",
+  "description": "store animals in DynamoDB",
+  "scripts": {
+    "create": "node src/create.js",
+    "insert": "node src/insert.js",
+    "test": "node src/test.js"
+  },
+  "author": "Nathan Glover <nathan@glovers.id.au>",
+  "license": "MIT",
+  "dependencies": {
+    "aws-sdk": "^2.100.0",
+    "bluebird": "^3.5.0"
+  }
+}
