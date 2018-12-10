@@ -15,10 +15,9 @@ module.exports = {
   },
   handle(handlerInput) {
     return new Promise((resolve, reject) => {
-      // Event houses our slot values
       const event = handlerInput.requestEnvelope;
-
-      // Resolve the animal name
+      const res = require("../resources")(event.request.locale);
+      const attributes = handlerInput.attributesManager.getSessionAttributes();
       const name = getAnimalName(event);
 
       let speechText;
@@ -27,13 +26,13 @@ module.exports = {
       utils.getAnimalByName(name, animal => {
         if (animal) {
           speechText = animal.description;
+          // Save a copy of the last search name
+          attributes.latestSearch = name;
         } else {
-          speechText = "No Animal was found under the name " + name;
+          speechText = res.strings.ANIMAL_NOT_FOUND.replace("{0}", name);
         }
 
-        reprompt =
-          "Want to check an animals status? Say: Whats the backstory of " +
-          name;
+        reprompt = res.strings.ANIMAL_MORE_INFO.replace("{0}", name);
 
         const response = handlerInput.responseBuilder
           .speak(speechText)
