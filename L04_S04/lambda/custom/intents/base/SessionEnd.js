@@ -12,8 +12,15 @@ module.exports = {
     console.log(
       `Session ended with reason: ${
         handlerInput.requestEnvelope.request.reason
-      }`
+      }. saving attributes`
     );
+
+    const attributes = handlerInput.attributesManager.getSessionAttributes();
+
+    // Clear and persist attributes
+    attributes.temp = undefined;
+    handlerInput.attributesManager.setPersistentAttributes(attributes);
+    handlerInput.attributesManager.savePersistentAttributes();
 
     return handlerInput.responseBuilder.getResponse();
   }

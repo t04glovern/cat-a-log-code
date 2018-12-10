@@ -12,15 +12,24 @@ module.exports = {
       const event = handlerInput.requestEnvelope;
 
       if (Object.keys(sessionAttributes).length === 0) {
-        sessionAttributes.temp = {};
-        sessionAttributes.temp.newSession = true;
-        sessionAttributes.sessions = sessionAttributes.sessions + 1 || 1;
-        sessionAttributes.userLocale = event.request.locale;
+        // No session attributes, lets get the persistent ones
+        attributesManager
+          .getPersistentAttributes()
+          .then(attributes => {
+            // If no persistent attributes therefore it's a new user
+            attributes.temp = {};
+            attributes.temp.newSession = true;
+            attributes.sessions = attributes.sessions + 1 || 1;
+            attributes.userLocale = event.request.locale;
 
-        // Since there were no session attributes
-        // set the temp attributes
-        attributesManager.setSessionAttributes(sessionAttributes);
-        resolve();
+            // Since there were no session attributes
+            // set the temp attributes
+            attributesManager.setSessionAttributes(attributes);
+            resolve();
+          })
+          .catch(error => {
+            reject(error);
+          });
       } else {
         resolve();
       }
