@@ -2,34 +2,28 @@
   "interactionModel": {
     "languageModel": {
       "invocationName": "cat. a. log database",
-      "types": [
-
-      ],
+      "types": [],
       "intents": [
         {
           "name": "AMAZON.CancelIntent",
-          "samples": [
-
-          ]
+          "samples": []
         },
         {
           "name": "AMAZON.HelpIntent",
-          "samples": [
-
-          ]
+          "samples": []
         },
         {
           "name": "AMAZON.StopIntent",
-          "samples": [
-
-          ]
+          "samples": []
         },
         {
           "name": "AnimalDetailsIntent",
-          "slots": [{
-            "name": "AnimalName",
-            "type": "AMAZON.US_FIRST_NAME"
-          }],
+          "slots": [
+            {
+              "name": "AnimalName",
+              "type": "AMAZON.US_FIRST_NAME"
+            }
+          ],
           "samples": [
             "Give me details about {AnimalName}",
             "What can you tell me about {AnimalName}",
@@ -38,8 +32,65 @@
             "Whats {AnimalName} story",
             "Tell me about {AnimalName}"
           ]
+        },
+        {
+          "name": "ChangeNameIntent",
+          "slots": [
+            {
+              "name": "Name",
+              "type": "AMAZON.US_FIRST_NAME",
+              "samples": ["My name is {Name}", "{Name}"]
+            }
+          ],
+          "samples": [
+            "{Name}",
+            "My name is {Name}",
+            "Change name to {Name}",
+            "Change name",
+            "Change my name to {Name}",
+            "Change my name"
+          ]
         }
       ]
-    }
+    },
+    "dialog": {
+      "intents": [
+        {
+          "name": "ChangeNameIntent",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "Name",
+              "type": "AMAZON.US_FIRST_NAME",
+              "confirmationRequired": false,
+              "elicitationRequired": true,
+              "prompts": {
+                "elicitation": "Elicit.Slot.Change.Name"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "prompts": [
+      {
+        "id": "Elicit.Slot.Change.Name",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "What is your name?"
+          },
+          {
+            "type": "PlainText",
+            "value": "What's your name?"
+          },
+          {
+            "type": "PlainText",
+            "value": "And your name?"
+          }
+        ]
+      }
+    ]
   }
 }

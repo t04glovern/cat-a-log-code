@@ -11,6 +11,7 @@ const SessionEnd = require("./intents/base/SessionEnd");
 
 // Custom Intents
 const AnimalDetails = require('./intents/AnimalDetails');
+const ChangeName = require('./intents/ChangeName');
 
 const ErrorHandler = {
   canHandle() {
@@ -31,6 +32,7 @@ const skillBuilder = Alexa.SkillBuilders.custom();
 exports.handler = skillBuilder
   .addRequestHandlers(
     AnimalDetails,
+    ChangeName,
     Launch,
     Help,
     Stop,
