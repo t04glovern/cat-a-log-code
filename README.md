@@ -15,3 +15,4 @@
 * [L04-S01-response-locale](/L04-S01)
 * [L04-S02-name-attribute](/L04-S02)
 * [L04-S03-interceptors](/L04-S03)
+* [L04-S04-dynamodb-persistence](/L04-S04)
