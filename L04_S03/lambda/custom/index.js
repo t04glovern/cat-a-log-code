@@ -3,6 +3,10 @@
 
 const Alexa = require("ask-sdk-core");
 
+// Interceptors
+const requestInterceptor = require("./interceptors/Request");
+const saveResponseInterceptor = require("./interceptors/Response");
+
 // Base Intent Handlers
 const Launch = require("./intents/base/Launch");
 const Help = require("./intents/base/Help");
@@ -39,4 +43,6 @@ exports.handler = skillBuilder
     SessionEnd
     )
   .addErrorHandlers(ErrorHandler)
+  .addRequestInterceptors(requestInterceptor)
+  .addResponseInterceptors(saveResponseInterceptor)
   .lambda();
