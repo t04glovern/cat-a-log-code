@@ -25,7 +25,11 @@ module.exports = {
 
       utils.getAnimalByName(name, animal => {
         if (animal) {
-          speechText = animal.description;
+          speechText =
+            '<audio src="https://s3.amazonaws.com/waanimals-deployment-scripts/alexa-audio/' +
+            animal.type +
+            '.mp3" /> ';
+          speechText += animal.description;
           // Save a copy of the last search name
           attributes.latestSearch = name;
         } else {
